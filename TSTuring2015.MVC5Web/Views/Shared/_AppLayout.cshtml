@@ -1,0 +1,41 @@
+﻿@using TSTuring2015.Common
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title - Thinking Solutions</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <header>
+        <div class="content-wrapper">
+            <a class="left" href="http://www.thinkingsolutions.com.au"><img src="@Url.Content("~/Content/Images/TSLogoSmall.jpg")" alt="Home"/></a>
+            <p class="site-title indent">
+                @Html.ActionLink(
+                        "Change Application", "Index", "Splash")
+            </p>
+        </div>
+    </header>
+    <div id="body">
+        <section class="content-wrapper clear-fix">
+            @RenderBody()
+        </section>
+    </div>
+    <footer>
+        <div class="content-wrapper">
+            <div class="float-left">
+                <p class="indent">
+                    &copy; @DateTime.Now.Year - Thinking Solutions Pty Ltd. All Rights Reserved. Online
+                    Version @Const.GetEnumName(PatomValues.Version)
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

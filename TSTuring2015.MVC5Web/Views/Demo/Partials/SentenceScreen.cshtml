@@ -1,0 +1,36 @@
+﻿@using TSTuring2015.MVCWeb.Models
+
+@model TSTuring2015.ScreenModels.FullScreenModels.SentenceScreenModel
+<table>
+    <tr>
+        <th>
+            More
+        </th>
+        <th>
+            Phrase Matched
+        </th>
+        <th>
+            Phrase Length
+        </th>
+        <th>
+            Phrase Name
+        </th>
+    </tr>
+    @for (int i = 0; i < @Model.PhraseList.Count; i++)
+    {
+        <tr>
+            <td>
+                @Html.Partial("Ajax/SelectDetail", new SelectDetails("Details", i))
+            </td>
+            <td>
+                @Model.PhraseList[i].Matches
+            </td>
+            <td>
+                @Model.PhraseList[i].PhraseLength
+            </td>
+            <td>
+                @Model.PhraseList[i].PhraseName
+            </td>
+        </tr>
+    }
+</table>

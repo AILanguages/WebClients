@@ -1,0 +1,30 @@
+IMPORTANT-READ CAREFULLY: This Thinking Solutions Software License Agreement is a legal agreement between you (either an individual or a single entity) and Thinking Solutions Pty Ltd for the Thinking Solutions software product(s) identified above which may include associated media, printed materials, copy protection devices, and "online" or electronic documentation ("SOFTWARE"). By installing, copying, or otherwise using the SOFTWARE (all within the limitations set forth in this Agreement), you agree to be bound by the terms of this License Agreement. If you do not agree to the terms of this License Agreement, DO NOT install or use the SOFTWARE. If the SOFTWARE was purchased by you, you may return it to your place of purchase for a full refund.
+
+The SOFTWARE is protected by copyright laws and international copyright treaties, as well as other intellectual property laws and treaties. The SOFTWARE is licensed, not sold.
+
+1. GRANT OF LICENSE. The SOFTWARE is licensed as follows:
+
+(a) Installation and Use. Thinking Solutions grants you the right to install and use one copy of the SOFTWARE on one computer. 
+
+(b) Backup Copies. You may also make copies of the SOFTWARE as may be necessary for backup and archival purposes. 
+
+2. DESCRIPTION OF OTHER RIGHTS AND LIMITATIONS.
+(a) Pre-release Software. If any component of the SOFTWARE or any of its components is marked "Prerelease" or "Beta", the component of the SOFTWARE constitutes pre-release code and may be changed substantially before commercial release. You may not use such component in a live operating environment where it may be relied upon to perform in the same manner as a commercially released product or with data that has not been sufficiently backed up.
+(b) Prohibition on Reverse Engineering, Decompilation, and Disassembly. You may not reverse engineer, decompile, or disassemble the SOFTWARE, except and only to the extent that such activity is expressly permitted by applicable law notwithstanding this limitation.
+(c) Rental. You may not rent, lease, or lend the SOFTWARE in any manner or through any medium.
+(d) If you exceed or violate the use limitations of this Agreement in any manner, including without limitation sharing or copying the SOFTWARE in any way including copying or loading the SOFTWARE for internet access, Thinking Solutions shall have the right, among other rights and remedies it may have, to terminate all of your rights under this Agreement, including without limitation disabling the SOFTWARE, and terminating this Agreement and all upgrades, support or other accessories or services that may be available under this Agreement, as applicable.
+
+(e) Transfer. You may permanently transfer all of your rights under this License Agreement, provided the recipient agrees to the terms of this License Agreement.
+(f) Compliance with Applicable Laws. You must comply with all applicable laws regarding use of the SOFTWARE.
+
+3. TERMINATION. Without prejudice to any other rights, Thinking Solutions may terminate this License Agreement if you fail to comply with the terms and conditions of this license. In such event, you must destroy all copies of the SOFTWARE.
+
+4. COPYRIGHT. All title, including but not limited to copyrights, in and to the SOFTWARE and any copies thereof are owned by Thinking Solutions or its suppliers. All title and intellectual property rights in and to the content which may be accessed through use of the SOFTWARE is the property of the respective content owner and may be protected by applicable copyright or other intellectual property laws and treaties. This License Agreement grants you no rights to use such content. All rights not expressly granted are reserved by Thinking Solutions.
+
+5. NO WARRANTIES. Thinking Solutions expressly disclaims any warranty for the SOFTWARE. THE SOFTWARE AND ANY RELATED DOCUMENTATION IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OR MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NONINFRINGEMENT. THE ENTIRE RISK ARISING OUT OF USE OR PERFORMANCE OF THE SOFTWARE REMAINS WITH YOU.
+
+6. LIMITATION OF LIABILITY. Regardless of whether any remedy set forth herein fails of its essential purpose, in no event will Thinking Solutions be liable to you for any special, consequential, indirect or similar damages, including any lost profits or lost data arising out of the use or inability to use the software even if Thinking Solutions has been advised of the possibility of such damages. Some countries do not allow the limitation or exclusion of liability for incidental or consequential damages so the above limitation or exclusion may not apply to you. In no case shall Thinking Solutions' liability exceed the purchase price for the software. The disclaimers and limitations set forth above will apply regardless of whether you accept the Software.
+
+8. GENERAL. This License Agreement is governed by the laws of the State of New South Wales, Australia.
+
+Should you have any questions concerning this License Agreement, or if you desire to contact Thinking Solutions for any reason, please contact Thinking SOlutions, PO Box 574, Terrey Hills NSW 2084, Australia. 

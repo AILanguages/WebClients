@@ -1,0 +1,14 @@
+﻿@model  TSTuring2015.ScreenModels.FullScreenModels.FullScreenModel
+
+@if (!string.IsNullOrEmpty(@Model.Structure))
+{
+    <span class="SmallMenuLabel">Logical Structure:</span>
+    @Html.Raw(@Model.Structure)
+}
+@if (!string.IsNullOrEmpty(@Model.QuestionText))
+{
+    <p></p>
+    <span class="SmallMenuLabel">Question details:</span>
+    @Html.Raw(@Model.QuestionText)
+    <p></p>
+}

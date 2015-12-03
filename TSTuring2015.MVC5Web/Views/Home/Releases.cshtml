@@ -1,0 +1,718 @@
+﻿@{
+    ViewBag.Title = "Project Turing Release Notes";
+}
+<div id="homesummary">
+    <h2>Online Project Turing Release Notes</h2>
+    <p>
+        As an online demonstration tool, Project Turing will continue to provide samples of the effectiveness of the pattern-matching paradigm. This
+        page will be updated regularly with release notes when changes are made. More granularity added to Xml files to reduce complexity of
+        set and list storage.
+    </p>
+    <h2 class="space50above">Change notes</h2>
+    <ul>
+        <li>
+            Version 0.9-940j:  16 Auguat 2015: Migrate to Visual Studio 2015, MVC 5 and update to structuremap.mvc5 package.
+        </li>
+        <li>
+            Version 0.9-924j: 26 March 2015: Refactor of conversation code. Simplifications around polar questions.
+        </li>
+        <li>
+            Version 0.9-921j: 15 March 2015: Refactor of pattern loading to create a language-independent group, such as punctuation and adpositional
+            phrases, that operate the same way for all languages currently loaded. The consolidation of language loading to a common structure will
+            faciliate new langauges being added.
+        </li>
+        <li>
+            Version 0.9-913j: 3 March 2015: Main changes to windows environment, which is not visible to the online demo. Changes include adding
+            voice to both the conversation and translation applications.
+        </li>
+        <li>
+            Version 0.9-912j: 5 January 2015: Major refactoring completed. Focus to be more on functionality and data as
+            oldest code now reflecting enterprise standards.
+        </li>
+        <li>
+            Version 0.9-845j: 19 December 2014: Conversation code refactoring completed per plan. All three applications now
+            updated to production level.
+        </li>
+        <li>
+            Version 0.9-836j: 15 December 2014: Simplified conversation and context tracking for new demonstration
+            showing the resolution of questions, statements and answers with a variety of pronoun types in a conversation.
+        </li>
+        <li>
+            Version 0.9-821j: 25 November 2014: Updated conversation patterns for meeting with German company.
+        </li>
+        <li>
+            Version 0.9-819j: 18 November 2014: Refactored conversation code to provide commonality between all languages.
+        </li>
+        <li>
+            Version 0.9-814j: 15 November 2014: Upgraded some Microsoft components including MVC.
+        </li>
+        <li>
+            Version 0.9-811j: 13 November 2014: Refactoring continues. Added English translations (generation) for a number of new cases such as
+            nouns and adjectives within the clause nucleus.
+        </li>
+        <li>
+            Version 0.9-792j: 29 October 2014: Change to swap between illocutionary force operators for use in training and for question answering
+            conversions. Conversion between question form and statement form, for example, allows easy clarification of non-polar questions.
+        </li>
+        <li>
+            Version 0.9-790j: 27 October 2014: Major revisions to integrate the conversation and translation code. Better implementation
+            of true Patom theory in non-production code, migrating to sets and lists as a priority.
+        </li>
+        <li>
+            Version 0.9-741j: 20 October 2014: Update content for Latin to show generation variation in which 3 words with appropriate inflections map to
+            English with many more. Includes active and passive variations with ablative "subject" for passive.
+        </li>
+        <li>
+            Version 0.9-710j: 29 September 2014: Updated with Windows project for voice service testing. New code recognizes
+            language sentences from a syllabus, translates it and then speaks it with the speech synthesizer for the target
+            language.
+        </li>
+        <li>
+            Version 0.9-690j: 14 August 2014: Integrate single matching approach for words using existing phrase matching code.
+        </li>
+        <li>
+            Version 0.9-689j: 13 August 2014: Migration to letter/character based system started. This enables a single approach to
+            Japanese and English while previously English used spaces to help identify word boundaries.
+        </li>
+        <li>
+            Version 0.9-687j: 12 August 2014: Fix German passive and correct typing error in 'bite' German file.
+        </li>
+        <li>
+            Version 0.9-685j: 10 August 2014: Extensions of conversation engine. Minor changes added from feedback (Adelaide business
+            trip re Australian education).
+        </li>
+        <li>
+            Version 0.9-684j: 23 July 2014: Simple Chinese examples added. Logo updated to new Thinking Solutions model.
+        </li>
+        <li>
+            Version 0.9-682j: 11 July 2014: Additional samples added for demonstration of more ambiguity situations.
+        </li>
+        <li>
+            Version 0.9-680j: 5 July 2014: Rework of state tracking for client server. Fix samples navigation reset after match in submenus.
+        </li>
+        <li>
+            Version 0.9-674j: 27 June 2014: Fix for passive linkset intersection. Using same intersection now for both active and passive.
+        </li>
+        <li>
+            Version 0.9-670j: 26 June 2014: Improve linkset intersection for WSD to incorporate more elements and reduce the number of points for it.
+        </li>
+        <li>
+            Version 0.9-665j: 25 June 2014: Bug fix - corrected words without senses matching to literal phrases correctly.
+        </li>
+        <li>
+            Version 0.9-663j: 23 June 2014: Consolidation and refactoring continues. Simplification of loading methods to allow for
+            online updating of vocabulary and grammar.
+        </li>
+        <li>
+            Version 0.9-650j: 13 June 2014: Change freeze for presentation completed. Mainly clean up of original patterns continues.
+        </li>
+        <li>
+            Version 0.9-643j: 10 June 2014: More data-only changes - removing duplicate, invalid matches and remove old hand-entered data that should be replaced
+            with WordNet content for the moment.
+        </li>
+        <li>
+            Version 0.9-642j: 9 June 2014: More data-only changes - added the verb 'put' amongst other changes.
+        </li>
+        <li>
+            Version 0.9-641j: 8 June 2014: More data-only changes to add additional expressions, such as pronoun-like locations normally
+            called 'adverbs' (part of the set).
+        </li>
+        <li>
+            Version 0.9-640j: 6 June 2014: Changes to formalise a number of verb phrase types: phrasal, prepositional and phrasal prepositional verbs. These support
+            the more "spoken form"" of English currently under analysis.
+        </li>
+        <li>
+            Version 0.9-634j: 2 June 2014: Minor changes and fixes applied for "frog story".
+        </li>
+        <li>
+            Version 0.9-633j: 30 May 2014: Redesign work, project plan documentation and scientific papers completed commercialisation phrase. There is currently some
+            validation work being done by The University of Sydney in conjunction with the NSW State Government "TechVouchers" grant. This update reflects
+            the start of a number of changes to word sense disambiguation via content changes. It also shows coverage changes from adding additional content.
+        </li>
+        <li>
+            Version 0.9-632j: 17 March 2014: Adding context for use in translation on the settings screens. This prompts users for information about the target
+            language (such as whether to use characters or not in Japanese and Korean) and the conversational parameters such as formality, politeness and gender. The
+            funcitonality will be added once the screen layout is finalised.
+
+        </li>
+        <li>
+            Version 0.9-630j: 14 March 2014: Today is the final day with the German International School (GIS) students,
+            Maria and Esteban, who have provided significant support during their work experience to improve the range
+            of sentences in German, Portuguese and Spanish. Thinking Solutions looks
+            forward to hearing more about these future captains of industry!
+        </li>
+        <li>P.S. We have also updated our back-end pattern generation for languages in today's release.</li>
+        <li>
+            Version 0.9-626j: 13 March 2014: Added perfect tense examples for Portuguese and Spanish. Refactoring ongoing for language generation for better consistency.
+            Fixed bug with selection of words that overlap in meaning with other identical words with differing meaning.
+        </li>
+        <li>
+            Version 0.9-620j: 12 March 2014: Ongoing updates with students to German, Portuguese and Spanish to extend samples. Major revision of generation code
+            to simplify generation by language.
+        </li>
+        <li>
+            Version 0.9-599j: 11 March 2014: Ongoing updates with students to German, Portuguese and Spanish to extend samples.
+        </li>
+        <li>
+            Version 0.9-597j: 8 March 2014: Screen rework update complete - application now in 3 visible parts - translation, conversation and demonstration.
+        </li>
+        <li>
+            Version 0.9-592j: 7 March 2014: Screen rework underway to simplify application access. Translation and conversation is now available via the "Splash" page
+            only.
+        </li>
+        <li>
+            Version 0.9-591j: 7 March 2014: Numerous updates around Spanish, Portuguese and German. Refactoring our generation approach to enable all
+            lanugages to rely on a single generation model. Along with the content additions for the 3 languages updated with the support of work experience
+            students with fluent language skills, we have updated the generation code to include additional agreement requirements.
+        </li>
+        <li>
+            Version 0.9-580j: 3 March 2014: Numerous updates made including the addition of some Korean examples. For the
+            next week we will be correcting our Portuguese, Spanish and German examples with the help of our work
+            experience students! Thanks to the workers going through our examples to enable other students
+            to see the acurate translations that we require for the school. We expect a YouTube video late this week
+            to explain the results.
+        </li>
+        <li>
+            Version 0.9-575j: 11 February 2014: In Silicon Valley reworking testing regime. A new design for our integration
+            tests are now implemented. Added a number of bug fixes and enhancements to the 3 demonstration products.
+        </li>
+        <li>
+            Version 0.9-558j: 27 January 2014: Refactored to support German and English qustion answering generically.
+        </li>
+        <li>
+            Version 0.9-554j: 24 January 2014: Fixed incorrect handling of pronouns "I" and "you" by updating pronoun patterns.
+        </li>
+        <li>
+            Version 0.9-553j: 22 January 2014: Added matches for more limited question with wrong assumptions.
+        </li>
+        <li>
+            Version 0.9-548j: 20 January 2014: Accumulated updates including the consolidation of language generation into a common area for both generation used in
+            translation and generation used in conversation (for all supported languages).
+        </li>
+        <li>
+            Version 0.9-540j: 15 January 2014: Added some content for Portuguese and Spanish to allow for "The dog bites the mother" to be generated.
+        </li>
+        <li>
+            Version 0.9-536j: 14 January 2014: More fixes applied. Major simplification of translation and generation methods to create production-ready code. As a result, we have
+            added a number of more shell languages for population when time permits including generation for Japanese. The shell languages are Spanish, Portuguese and
+            Italian. At present these languages will not generate translations as their words and phrases are not populated.
+        </li>
+        <li>
+            Version 0.9-505j: 12 January 2014: Fixes applied. Broke questions into 4 categories, depending whether the question or answer is positive or negative. In English
+            it is difficult to answer negative questions, especially to negative information. say: "John did not arrive." question: "Didn't John arrive." Yes? We have implemented
+            the answer: "Really, no, he didn't." For future review and discussion.
+        </li>
+        <li>
+            Version 0.9-503j: 10 January 2014: Fixed answers to align with questions. This ensures that answers align both with the questions and
+            the matched information.
+        </li>
+        <li>
+            Version 0.9-0496j: 9 January 2014: Updated answering to deal with additional information. By expanding on yes/no and "I don't know" answers, the
+            resposnses appear more natural. Refactored code base to utilise translation genration capability.
+        </li>
+        <li>
+            Version 0.9-0460j: 2 January 2014: Cleaning up continues for 2013 work. Content enhancements to progress in January, with the assistance of
+            some local students with foreign language skills. The plan is to provide a number of additional translations to better support school education
+            in the short term while scoping the effort required for language-by-language additions.
+        </li>
+        <li>
+            Version 0.9-0443j: 31 December 2013: Happy New Year! Today's updates are mainly internal improvements along with updates to our internal
+            testing procecedures to incorporate integration testing. Some significant changes have been made to answering: now generation code is utilised
+            to provide responses in the target language. Due to limited language coverage outside of English, this may mean your answers are not good
+            if your target langauge isn't English!
+        </li>
+        <li>
+            Version 0.9-0418j: 25 December 2013: Merry Christmas! Today, we have extended our view of the matched conversational elements to be more generic, and
+            include a view of noun clauses, possessives in addition to the clause view with its actor/undergoer elements.
+        </li>
+        <li>
+            Version 0.9-0407j: 23 December 2013: Major upgrade of pronoun resolution / context tracking. A number of consolidations were made to support
+            multiple languages and provide a more consistent framework for the future.
+        </li>
+        <li>
+            Version 0.9-0367j: 9 December 2013: Simplified and consolidated (refactorerd) answering code base. Added use of synonyms to hypernyms to
+            question-answering capability.
+        </li>
+        <li>
+            Version 0.9-0338j: 4 December 2013: Added limited capability to translate pronouns and negation for use in conjugation tool.
+        </li>
+        <li>
+            Version 0.9-0333j: 2 December 2013: Updated to 2014 format. Consolidated locations for grammatical elements to language-specific layer and
+            meaning elements including WSD to the semantic layer. Minor changes to some vocabulary.
+        </li>
+        <li>
+            Version 0.9-0318j: 26 November 2013: Added simple randomisation for responses to add variety to answering.
+        </li>
+        <li>
+            Version 0.9-0314j: 25 November 2013: Ongoing refactoring of question-answering. Pronoun resolution is the current focus.
+        </li>
+        <li>
+            Version 0.9-0312j: 24 November 2013: Major revision complete including question answering bug fixes. Code refactored.
+        </li>
+        <li>
+            Version 0.9-0296j: 20 November 2013: Updating to reflect embedded clauses. More changes to come before completion of this task.
+        </li>
+        <li>
+            Version 0.9-0291j: 17 November 2013: Implemented improved pronoun resolution. Reflexives working properly within their clause boundary. More
+            work required around some pronouns, including first and second person. Improving embedded clause handling within a clause for conversation.
+        </li>
+        <li>
+            Version 0.9-0281j: 13 November 2013: Started treating reflexive pronouns in conversation for better pronoun resolution. Added
+            reflexive inhibitions to work in line with RRG observations especially around the order of reflexives in clauses as they relate
+            to the logical structures.
+        </li>
+        <li>
+            Version 0.9-0274j: 11 November 2013: Refactored pronoun handling. Added initial check on ambiguity of pronoun use to prompt for clarification.
+        </li>
+        <li>
+            Version 0.9-0269j: 9 November 2013: Published version with simplified pattern matching after refactoring.
+        </li>
+        <li>
+            Version 0.9-0267j: 8 November 2013: Question answering improvements: dealing with some tense and aspect deviations. Has he? No, but he did. And
+            negatives to be looked at next. e.g. He didn't do it? No, he did (rather than "Yes, he didn't").
+        </li>
+        <li>
+            Version 0.9-0264j: 7 November 2013: Question answering improvments added to increase coverage of possibilities. New video to look at changes today.
+        </li>
+        <li>
+            Version 0.9-0255j: 5 November 2013: Question answering demonstrated with yes/no polar questions and what, when and where shown. Continuing work
+            on questions and conversation generally to continue.
+        </li>
+        <li>
+            Version 0.9-0244j: 3 November 2013: Additional improvements implemented for demonstration and feedback purposes.
+        </li>
+        <li>
+            Version 0.9-0233j: 31 October 2013: Added server end receipt for text entered in converse screen. The screen is currently online to showcase the
+            proposed model. It is not yet operational, and any feedback would be welcomed. To display a sample, type "Sample" and press the ""Say it!"" button.
+        </li>
+        <li>
+            Version 0.9-0229j: 29 October 2013: Added the 'converse' button and screen to interact with the prototype using
+            language. Started wiring up an interface to the web service to interact with this client.
+        </li>
+        <li>
+            Version 0.9-0225j: 28 October 2013: Added new functionality for context tracking and incorporation of conversation/discourse. Will reorganise the
+            tab selection scheme to combine FAQ/Help and create space for the prototype conversation page.
+        </li>
+        <li>
+            Version 0.9-0215j: 16 October 2013: Person agreement reintroduced for German. Sentences now matching left to right as per English model including
+            the ability to start a sentence without just a nominal noun.
+        </li>
+        <li>
+            Version 0.9-0196j: 13 October 2013: Disabled German and Latin person agreement while migrating to new generic patterns for clause matching. This enables the free-word-order
+            to be matched without the combinatorial issues. Person agreement to be re-introduced this week.
+        </li>
+        <li>
+            Version 0.9-0189j: 10 October 2013: Minor updated to correct imperatives commands as we validate the existing examples following the RRG migration and the
+            addition of translation capability.
+        </li>
+        <li>
+            Version 0.9-0185j: 6 October 2013: A major rework of xml and file loading methods for English has been completed. This rework is not expected to impact on
+            the current operation. However it was a pre-requisite to the next phase of development to faciliate expansion of non-English languages. It was also
+            necessary for the upcoming integration of the context "proof of concept". Here, the existing engine is supplemented with additional patterns to
+            disambiguate between many of the existing context-related limitations. Thanks to all the contributors that achieved this milestone amongst our existing
+            workload! (John Ball: 6 Oct 2013)
+        </li>
+        <li>
+            Version 0.9-0113j: 30 September 2013: Minor data fixes. Working through the examples in sequence to ensure all RRG patterns are now operating correctly.
+        </li>
+        <li>
+            Version 0.9-0112j: 29 September 2013: *** Major *** reorganisation of the xml files into common language structures to make the addition of new languages
+            simpler. Working through the examples to simplify their order and make old examples work under the RRG model. This typically involves the identification of
+            the language and the addition of the appropriate logical structure to the nucleus.
+        </li>
+        <li>
+            Version 0.9-0084j: 26 September 2013: Redesigned translation elements migrated. Will populate additional examples to demonstrate shortly.
+        </li>
+        <li>
+            Version 0.9-0083j: 24 September 2013: Migration to 'universal encyclopaedia' design completed. Consolidated the parts of speech and extended the use of
+            attributes as a part of the redesign. You will notice that the words in a languages are linked to at least one language word to support translation between
+            any element of the encyclopaedia and a target language (and vice versa).
+        </li>
+        <li>
+            Version 0.9-0078j: 23 September 2013: Limited migration to 'universal encyclopaedia' underway. We have removed definitions excepting English ones and linked all
+            matches to these. For French, German, Latin and Japanese examples, this means the definitions will be in English for the moment. A side-effect is that all
+            words in all languages appear in the sense display, despite them not being available for phrase matching outside of their native language.
+        </li>
+        <li>
+            Version 0.9-0075j: 18 September 2013: Some new usability features have been added. You can now change the target language from the screens that use it, instead of
+            just the settings screen. We have also added the key toggle switches to the start screen and the file category selection to the samples page.
+        </li>
+        <li>
+            Version 0.9-0073j: 17 September 2013: Winding up display changes and back-end consolidation. Migrated to more modern c# elements to improve the ability to
+            add translation and other additional features to the environment.
+        </li>
+        <li>
+            Version 0.9-0058j: 11 September 2013: Bug fixes applied with code consolidation.
+        </li>
+        <li>
+            Version 0.9-0055j: 9 September 2013: Major rework of the WCF models for the client. This introduces better type management. For those using the web service,
+            you need to recompile, referencing the updated models. This completes our work to simplify the code base as our implementation of new functions expands.
+        </li>
+        <li>
+            Version 0.9-0048j: 6 September 2013: Samples tab reworked to select a collection of files. Next examples will be validated following changes in architecture.
+        </li>
+        <li>
+            Version 0.9-0046j: 3 September 2013: Updated display for simple views. In the coming days we will simplify the view to provide the key elements only.
+        </li>
+        <li>
+            Version 0.9-0043j: 31 August 2013: Major refactor of WCF to UI. In other words, simplified user interaction between client and web services to improve
+            recovery of lost sessions and simplify transmission of sentence elements.
+        </li>
+        <li>
+            Version 0.9-0027j: 26 August 2013: Bug fix. WCF not behaving well with IIS. Found some StructureMap changes that addressed the change that relates to
+            how WCF relates to static variables. Enough said, so here is the release that should stop some sessions not finding matches.
+        </li>
+        <li>
+            Version 0.9-0026j: 25 August 2013: Refactored WCF code to simplify transactions. Improved the web service to stand alone with smaller (more granular)
+            transactions to enable more complex client capabilities without changing the server.
+        </li>
+        <li>
+            Version 0.9-0019j: 14 August 2013: Improved translation selection with new main menu tab. This consolidates user settings to the one menu element and
+            makes future customisations easier for each web-based user.
+        </li>
+        <li>
+            Version 0.9-0015j: 7 August 2013: Update: add additional translation examples to demonstrate adjective linking to nouns which include word-sense disambiguation.
+        </li>
+        <li>
+            Version 0.9-0008j: 29 July 2013: Update: refactor pattern types for translation purposes to
+            facilitate patterns used for matching to be used as generation patterns.
+        </li>
+        <li>
+            Version 0.9-0001j: 22 July 2013: New major release - update to prerelease version 9. Removed alternative pattern capability in order to facilitate
+            translation examples and simplify the code base. Patterns now matched with simpler lists, whereas previously limited matching was available
+            within a complex pattern. Pattern matching now relies on simple elements and the build up of combinations enables equivalent functionality more easily.
+            Focus will now return to demonstration of translation capabilities more broadly.
+        </li>
+        <li>
+            Version 0.8-0172j: 7 July 2013: Added translate samples to discuss display options. Updated non-English examples to include Logical Structures.
+        </li>
+        <li>
+            Version 0.8-0169j: 24 June 2013: Following feedback from schools, some samples have been added for German and Latin. These are just samples,
+            like the Japanese examples. Note English has a far larger set of active patterns as needed for the proof of concept.
+        </li>
+        <li>
+            Version 0.8-0166j: 1 February 2013: Draft version of ellipsis introduced with some examples. Need to convert to full version, but ok for
+            demonstration purposes. Corrected Japanese example to include different character sets.
+        </li>
+        <li>
+            Version 0.8-0155j: 21 January 2013: Simplified user interface. We are focussing on improving the samples page to finalise the 2012 work.
+        </li>
+        <li>
+            Version 0.8-0144j: 18 January 2013: Adding to samples based on Van Valin juncture and nexus types to expand the range of matched patterns.
+            See samples tab '1b.Juncture-Nexus' which will be renamed with the final sample consolidation this month.
+        </li>
+        <li>
+            Version 0.8-0143j: 17 January 2013: Working through samples for better consistency. Not all examples currently working following RRG migration due
+            to some patterns not yet migrated.
+        </li>
+        <li>
+            Version 0.8-0140j: 14 January 2013: Fixes applied to deal with reported erros in dealing with nuclear junctures in particular and some over keen
+            patterns that evaded intersection.
+        </li>
+        <li>
+            Version 0.8-0134j: 13 January 2013: Major rework of code for intersection, matching and the display of logical structures. This nears the end of
+            the RRG conversions for the prototype.
+        </li>
+        <li>
+            Version 0.8-0089j: 2 January 2013: Happy New Year! This release includes a number of old functions not previously migrated to the RRG version such
+            as 'tag questions'. They are easy to use, aren't they?
+        </li>
+        <li>
+            Version 0.8-0081j: 28 December 2012:Migration to structuremap continued to simplify the code base. More examples of RRG and Patom theory to be
+            implemented for the year-end activities.
+        </li>
+        <li>
+            Version 0.8-0073j: 26 December 2012: Refactoring completed for now. We have reworked clauses including noun-headed clauses. Logical structure breakdown now
+            displayed per licensed core to increase the visibility of the clause buildup from cores. Remember that a logical structure cannot be displayed
+            until the end of a sentence is reached because it isn't known until then. Think about it. Note the completeness constraint is not yet implemented which
+            allows for some invalid matches. The tradeoff between work effort, duplication and the ability to demonstrate the technology has resulted in the
+            pragmatic decision not to implement that requirement at this stage. We need to leave some things for 2013!
+        </li>
+        <li>
+            Version 0.8-0045j: 17 December 2012: Refactoring continues. Simplifying matching of logical structures for improved display of complex clauses.
+        </li>
+        <li>
+            Version 0.8-0044j: 15 December 2012: Refactoring to improve handling of complex sentences. Additions to be made soon. Started migration to better
+            display complex clauses. Display of each LS in such a clause is NOT yet being displayed.
+        </li>
+        <li>
+            Version 0.8-0043j: 10 December 2012: Two new sample tabs added. Some remaining issues with full spectrum of examples due to tightening up the
+            matching to support RRG. Included a clefted example.
+        </li>
+        <li>
+            Version 0.8-0041j: 8 December 2012: Added additional noun clause patterns.
+        </li>
+        <li>
+            Version 0.8-0036j: 7 December 2012: Fixes and expansion for noun-headed clauses.
+        </li>
+        <li>
+            Version 0.8-0035j: 6 December 2012: Updated noun clauses. Major revision to handle fuller range of verb aspects and tenses. Some examples impacted which
+            will be addressed by the next week's refactoring. Updated internal allocation of classes to simplify code base.
+        </li>
+        <li>
+            Version 0.8-0027j: 29 November 2012: Updated examples with working versions of noun clauses. Some clauses in main class not yet handled within the
+            noun clause class.
+        </li>
+        <li>
+            Version 0.8-0025j: 25 November 2012: Refactoring of noun clause handling, word loading and intersection. This work enables the display of multiply-nested
+            clauses with noun heads.
+        </li>
+        <li>
+            Version 0.8-0020j: 21 November 2012: Enabled nouns heading clauses with redesign of full function. Refactored to simplify internal matching. More work
+            ongoing, and examples now reflect changes.
+        </li>
+        <li>
+            Version 0.8-0019j: 19 November 2012: Updated adjectives linking with infinitive phrases. Added new tabs for samples for these examples. Disabled
+            nouns heading clauses for redesign of full function.
+        </li>
+        <li>
+            Version 0.8-0017j: 14 November 2012: Implemented a few forms of state verbs - feelings, be-ing and raw states. This work locks down the variety
+            of matched patterns which will be addressed soon with a catch all, once the standard options are identified. Some infinitive links are also
+            implemented today - 'he is happy to help' for example, broken into 2 pieces - he is happy and he helps.
+        </li>
+        <li>
+            Version 0.8-0015j: 12 November 2012: Ongoing issues with our Bigpond broadband service. Has been ongoing for 5 days with major impact including
+            web site and email access. In the meantime, this release provides the operational LS structure as well as visual clause relationships.
+        </li>
+        <li>
+            Version 0.8-0014j: 10 November 2012: An important release today includes the layered examples of logical structures and better consolidation of
+            Logical Structures. The semantics tab shows a number of these examples. Also the causative 'made' examples are introduced with only subtly different
+            syntax: 'the sergeant marched the soldiers' versus 'the sergeant made the soldiers march'.
+        </li>
+        <li>
+            Version 0.8-0011j: 6 November 2012: Added embedded clauses to deal with infinitive phrases. For example, 'Dana persuaded Kim to eat the
+            beef' now shows the infinitive phrase incorporated on the clause display screen. Some minor work remaining to incorporate the potentially
+            infinite variety - e.g. 'he wants to go to start to try to begin to eat the beef.'
+        </li>
+        <li>
+            Version 0.8-0006j: 29 October 2012: LS refactoring underway and better interaction between semantic elements of differing lengths.
+        </li>
+        <li>
+            Version 0.8-0004j: 27 October 2012: Added active accomplishment verb classes including causative forms. Other additions include the
+            update of patterns to match other LS examaple. Will refactor LS next week.
+        </li>
+        <li>
+            Version 0.8-0001j: 22 October 2012: Bug fixes. Repaired error with junction between matrix verb and infinitive. The junction requires
+            additional refactoring and change before it is working correctly. Other verb classes remain to be included in this week's work.
+        </li>
+        <li>
+            Version 0.8-0000j: 19 October 2012: Logical structure design completed and implemented. Migration of words to the new model is
+            ongoing. This release represents the consolidation of a number of major changes which is reflected in the version number update
+            to 0.8.
+        </li>
+        <li>
+            Version 0.7-0158j: 6 October 2012: Logical structure back-end rework in progress. The updated version builds up each structure from its component
+            elements. We expect to complete this rework tomorrow. Additional examples are included with the RRG domain online examples.
+        </li>
+        <li>
+            Version 0.7-0154j: 1 October 2012: Major refactoring to reduce complexity within phrases now completed. This allows easier creation of
+            new clause types and their logical structure displays. Starting to migrate when and where phrases into the RRG model.
+        </li>
+        <li>Version 0.7-0143j: 28 September 2012: Implemented initial RRG complex clauses.</li>
+        <li>
+            Version 0.7-0138j: 25 September 2012: Code refactoring continues. Technical changes to enable future expansion. Some functions require more work before
+            restored to full function.
+        </li>
+        <li>
+            Version 0.7-0131j: 23 September 2012: Code refactored to enable additional verb class addition. Added infinitives, gerunds and imperatives and
+            updated examples accordingly.
+        </li>
+        <li>
+            Version 0.7-0121j: 21 September 2012: Updated Japanese patterns to display in RRG format.
+        </li>
+        <li>
+            Version 0.7-0119j: 18 September 2012: Revised core engine to improve matching accuracy of complex words and patterns. Added
+            more RRG information on noun screens.
+        </li>
+        <li>
+            Version 0.7-0105j: 9 September 2012: Causative accomplishments tested including passive forms. Added logical structure
+            for activities.
+        </li>
+        <li>
+            Version 0.7-0101j: 7 September 2012: RRG update. Includes matching of sample longer clauses with causative
+            accomplishments. Tidy up to go on over the weekend to tidy up to deal with some of the variations.
+        </li>
+        <li>
+            Version 0.7-0098j: 3 September 2012: RRG update. Migration to display the logical structure and verb
+            classes is underway. Looking to include question details alongside for each clause.
+        </li>
+        <li>
+            Version 0.7-0096j: 28 August 2012: RRG update. Includes a new sample set for demonstration
+            purposes including the layered clause model: nucleus, core and clause levels.
+        </li>
+        <li>
+            Version 0.7-0094j: 23 August 2012: The migration of the code base to Microsoft MVC 4 and WCF 5.0
+            has been completed. This work was done to improve future capabilities through HTML5 amongst other
+            features. Work now underway to provide better clause displays per RRG model.
+        </li>
+        <li>
+            Version 0.7-0088j: 17 August 2012: Fixes for the clause screens. Have converted noun
+            screens into clause screens. This provides a more consistent model. The weekend plan is to setup
+            some of the verb classes along with their corresponding logical structures.
+        </li>
+        <li>
+            Version 0.7-0086j: 16 August 2012: Improvements include navagation changes and RRG
+            shading of clauses for better clarity.
+        </li>
+        <li>
+            Version 0.7-0083j: 12 August 2012: Improvements include the base RRG clause display
+            with linkset intersection on matching. Applies currently to intransitive and transitive
+            clauses, including those headed by a noun. Currently this RRG version is work in
+            progress and is pre-alpha demonstration code only for discussion purposes.
+        </li>
+        <li>
+            Version 0.7-0068j: 3 August 2012: Improvements include the ability to match patterns
+            directly from a url. Use <a href="http://rrg.thinkingsolutions.co/Demo?Text=Did the man eat?">http://rrg.thinkingsolutions.co/Demo?Text=Did the man eat?</a>
+            as an example. The question mark, followed by 'Text=' and your text is the syntax. RRG work has
+            slowed to improve the internals of our demo code for more flexibility. The clean
+            break between the server and client is finished, with the migration to the new model
+            pending completion of RRG migration.
+        </li>
+        <li>
+            Version 0.7-0057j: 22 July 2012: Please use demo.thinkingsolutions.co for the current
+            demonstration release. This release is being migrated to RRG and as present it's
+            function is limited.
+        </li>
+        <li>
+            Version 0.7-0055j: 21 July 2012: Web service model operating on rrg.thinkingsolutions.co
+            on a trial basis to identify the accuracy of the conversion to date to the RRG model.
+            We have added a new function to match a pattern from the url as well.
+        </li>
+        <li>
+            Version 0.7-0045j: 9 June 2012: Initiated migration to web service model. Also,
+            the pattern model is migrating to the Role and Reference Grammar (RRG) to satisfy
+            the requirements for word-sense disambiguation and its consistent, bidirectional
+            handling of syntax to semantics regardless of natural language used. Thanks to the
+            primary developer of RRG, Robert D. Van Valin, Jr., for his assistance in patiently
+            clarifying aspects of RRG to date for us. This version is incomplete, and will form
+            the basis of future products.
+        </li>
+        <li>
+            Version 0.7-0024j: 5 March 2012: Added a number of the key contractions used in
+            English. At this stage, we have not implemented a word-level pattern matching engine,
+            so contractions are handled manually.
+        </li>
+        <li>Version 0.7-0022j: 19 February 2012: Addition of tuturial samples.</li>
+        <li>
+            Version 0.7-0021j: 16 February 2012: Minor additions to patterns to display plurals
+            and certain proper names properly.
+        </li>
+        <li>
+            Version 0.7-0018j: 11 February 2012: Added intersection for passive cases to showcase
+            capability. Added new examples to demonstrate the point of passive intersection.
+        </li>
+        <li>
+            Version 0.7-0013j: 8 February 2012: Deploy to online test and demonstration servers.
+            Use radius in corners of buttons for nicer effect.
+        </li>
+        <li>
+            Version 0.7-0012j: 8 February 2012: Some issues with Internet Explorer addressed
+            by stopping caching. Display formatting for the web has been simplified. The latest
+            changes should make using the intelligent dictionary more intuitive to use and easier
+            to read.
+        </li>
+        <li>
+            Version 0.7-0006j: 5 February 2012: Created Ajax console to display matches. This
+            improves display performance and helps users with clarity around the browser back
+            button. Highlighting the selected sample button also for beter clarity.
+        </li>
+        <li>
+            Version 0.7-0001j: 26 January 2012: Major revision completed. The version 7 engine
+            is now operating. This brings a large number of changes to the core engine and allows
+            for the display of more levels of pattern matching than previous versions. The "Tracking"
+            tab in the samples page illustrates the capability of matching phrases embedded
+            within others. Happy Australia Day!
+        </li>
+        <li>
+            Version 0.6-0544j: 31 December 2011: Added additional screen to word display to
+            include details of all word forms possible on the second word screen. This allows
+            words like 'was' to display washington and washingtons as alternative forms of the
+            word was (You can look it up if this doesn't make sense!)
+        </li>
+        <li>
+            Version 0.6-0534j: 21 December 2011: Refactoring. It's that time of year to be ready
+            for 2012. We're just improving the design to cater to changes such as the upcoming
+            sentence generator and the online school trials. Again, these code improvements
+            should result in no visible changes to the program's output.
+        </li>
+        <li>
+            Version 0.6-0526j: 17 December 2011: More changes to code base to improve ongoing
+            support. No change to functionality is expected, although some testing indicates
+            annother version is required before all samples again function properly.
+        </li>
+        <li>
+            Version 0.6-0525j: 12 December 2011: Refactoring code ongoing to better patterns.
+            Japanese example fixed - failing due to typo in clause pattern.
+        </li>
+        <li>
+            Version 0.6-0523j: 7 December 2011: Minor bug fixes. Found some missing load statements
+            after migration. Working through examples to repair any failing examples. Reducing
+            some duplicates with improved clarity on subjects and objects within clauses.
+        </li>
+        <li>
+            Version 0.6-0522j: 4 December 2011: Large rework to fully separate patterns from
+            code base and include settings details within the Xml.
+        </li>
+        <li>
+            Version 0.6-0502j: 8 November 2011: Allowed for XML input of a words patterns to
+            remove code change requirement. This facilitates users to create their own languages
+            without need for code access.
+        </li>
+        <li>
+            Version 0.6-0498j: 24 October 2011: Updated support for tag phrases and improved
+            performance of some re-used patterns such as phrase lists.
+        </li>
+        <li>
+            Version 0.6-0493j: 19 October 2011: Minor updates only. This version with its associated
+            sample files has been used for the current video explanations.
+        </li>
+        <li>
+            Version 0.6-0485j: 16 October 2011: Fixes to some of the screen displays and other
+            feedback from Japan. New samples list view with ability to modify a sentence from
+            the samples before submission.
+        </li>
+        <li>
+            Version 0.6-0484j: 16 October 2011: Simplified internal handling of pattern selection
+            for overphrase use including senses and inflections. Minor changes to web user interface
+            to clarify which patterns are matched in clauses, nouns and adjective phrases.
+        </li>
+        <li>
+            Version 0.6-0466j: 8 October 2011: Revision of core code to implement improved intersection
+            and merge pronoun use with noun use. New examples introduced to demonstrate capability
+            of pattern engine.
+        </li>
+        <li>
+            Version 0.6-0455j: 30 September 2011: Eliminated redundant display of patterns that
+            are shorter than the longest sentence. Updated CSS to improve sentences display
+            and converted some early patterns to more flexible ones around pronouns.
+        </li>
+        <li>
+            Version 0.6-0451j: 28 September 2011: A number of changes are incorporated that
+            match more complicated phrases such as adjectives plus clauses and the use of more
+            complex phrase patterns (like gerund and infinitive forms) within other patterns.
+            Some minor changes added to the user interface to display more matched patterns
+            than before.
+        </li>
+        <li>
+            Version 0.6-0406j: 9 September 2011: We have changed the way the web engine works
+            to make it easier to maintain. There should be little noticable change this time
+            around but we are now able to add a few new features to the web and windows versions
+            more easily.
+        </li>
+        <li>
+            Version 0.6-0393j: 23 August 2011: major streamlining of phrase-level patterns and
+            the loading mechanism. Xml implemented for external pattern loading to enable future
+            product flexibility. Many of the trial patterns have been removed and consolidated
+            into larger patterns. The net result should be greater reliability although in the
+            short-term some missing patterns will result in fewer valid matches.
+        </li>
+        <li>
+            Version 0.6-0315j: 21 June 2011: include release tracking section. Adding clarification
+            of Japanese intent to samples page.
+        </li>
+        <li>Version 0.6-0312j: include FAQ section. </li>
+    </ul>
+    <p>
+        Please refer to the FAQ section if you have any questions.
+    </p>
+</div>

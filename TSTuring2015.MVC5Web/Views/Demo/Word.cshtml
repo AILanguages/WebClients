@@ -1,0 +1,13 @@
+﻿@{
+    Layout = "~/Views/Shared/_ConsoleLayout.cshtml";
+}
+@using TSTuring2015.MVCWeb.Models
+@model  TSTuring2015.ScreenModels.FullScreenModels.WordScreenModel
+<div id="Word" class="white">    
+    @Html.Partial("Partials/PartWord", Model)
+    
+    <p class="button">
+        @Html.Partial("Ajax/SelectWord", new SelectDetails("Full Details", 0))        
+    </p>
+</div>
+

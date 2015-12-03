@@ -1,0 +1,19 @@
+﻿@using TSTuring2015.MVCWeb.Models
+@model TSTuring2015.ScreenModels.PartDisplays.SenseListModel
+
+<div id="partwithsenses slidecontainer">
+    <span class="MenuLabel Clear slide middle text-right">@Model.Title</span>
+    <span>
+        <textarea class="basestyle mainareatext middle slide" readonly="readonly">@Model.Matches</textarea></span>
+    <span class="button1 middle slide">
+        @Html.Partial("Ajax/MoreChangeDetail", new ModelDetails("More", @Model.Selection, @Model.Part))        
+    </span>
+
+    <span class="MenuLabel Clear middle slide text-right">Senses</span>
+    <span>
+        <textarea class="basestyle middle mainsensetext slide" readonly="readonly">@Model.Senses</textarea>
+    </span>
+    <span class="button1 slide">
+        @Html.Partial("Ajax/MoreSense", new ModelDetails("More Sense", @Model.Selection, @Model.Part))
+    </span>
+</div>

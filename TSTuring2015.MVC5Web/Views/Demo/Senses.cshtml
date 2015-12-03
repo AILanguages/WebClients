@@ -1,0 +1,31 @@
+﻿@{
+    Layout = "~/Views/Shared/_ConsoleLayout.cshtml";
+}
+@using TSTuring2015.MVCWeb.Models
+@model  TSTuring2015.ScreenModels.FullScreenModels.SensesScreenModel
+<div id="Senses" class="cleantable">
+    <table>
+        <tr>
+            <th>More
+            </th>
+            <th>Sense Description
+            </th>
+            <th>Sense Label Assigned
+            </th>
+        </tr>
+        @for (int i = 0; i < @Model.SenseList.Count; i++)
+        {
+            <tr>
+                <td>
+                    @Html.Partial("Ajax/MoreSense", new ModelDetails("More", i, 0))
+                </td>
+                <td>
+                    @Model.SenseList[i].Matches
+                </td>
+                <td>
+                    @Model.SenseList[i].PhraseName
+                </td>
+            </tr>
+        }
+    </table>
+</div>
