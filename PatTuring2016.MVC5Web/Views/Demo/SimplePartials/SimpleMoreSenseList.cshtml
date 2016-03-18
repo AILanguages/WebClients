@@ -1,0 +1,13 @@
+﻿@using System.Linq
+@using PatTuring2016.MVC5Web.Models
+@model PatTuring2016.Common.ScreenModels.PartDisplays.SenseListModel
+
+<span class="simplepartwithsenses slidecontainer">
+    <span class="headlabel slide">@Model.Title</span>
+    <span class="selecttext slide">
+         @Html.Partial("Ajax/MoreChangeDetail", new ModelDetails(@Model.Matches, @Model.Selection, @Model.Part))      
+    </span>
+    <span class="simplebutton slide">
+        @Html.Partial("Ajax/MoreSense", new ModelDetails("Definitions (" + @Model.SenseCount.Split(' ').FirstOrDefault() +")", @Model.Selection, @Model.Part))
+    </span>
+</span>

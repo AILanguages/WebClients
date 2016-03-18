@@ -1,0 +1,33 @@
+﻿@{
+    Layout = "~/Views/Shared/_ConsoleLayout.cshtml";
+}
+@model  PatTuring2016.Common.ScreenModels.FullScreenModels.StandardScreenModel
+
+<div id="@Model.CssScreen">
+    
+    @Html.Partial("Partials/TopScreen", Model.Top)
+
+    @if (!string.IsNullOrEmpty(@Model.Description))
+    {
+        <span class="SmallMenuLabel">Verb Class:</span>
+        <span>@Model.Description</span>
+    }
+    @if (!string.IsNullOrEmpty(@Model.Structure))
+    { 
+        <span class="SmallMenuLabel">Logical Structure:</span>
+        @Html.Raw(@Model.Structure)
+        <p>
+        </p>
+    }
+
+    <div id="main">
+        @if (@Model.Main.Count > 0)
+        {
+            @Html.Partial("Partials/ListSenseList", @Model.Main)            
+        }
+        @if (@Model.MainList.Count > 0)
+        {
+            @Html.Partial("Partials/NewGridScreen", @Model.MainList)
+        }
+    </div>
+</div>

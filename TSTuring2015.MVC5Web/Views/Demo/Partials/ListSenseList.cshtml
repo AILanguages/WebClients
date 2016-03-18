@@ -1,6 +1,0 @@
-﻿@model List<TSTuring2015.ScreenModels.PartDisplays.SenseListModel>
-
-@foreach (var item in Model.Where(item => item != null).Where(item => item.Title != "Licensor"))
-{
-    @Html.Partial("Partials/MoreSenseList", item)
-}

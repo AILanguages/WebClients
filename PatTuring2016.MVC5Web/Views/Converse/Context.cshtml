@@ -1,0 +1,90 @@
+﻿@if (IsAjax)
+{
+    Layout = null;
+}
+@model PatTuring2016.Common.ScreenModels.ConverseViewModel
+@{
+    Layout = "~/Views/Shared/_AppLayout.cshtml";
+    ViewBag.Title = "Context";
+}
+<div id="converse">
+    <h1>Context Screen</h1>
+    <p class="white">
+        This screen provides the tracking details of a conversation in progress. Context is a way to track
+        who is talking to whom, where and when. At present, the computer keeps track of when by resetting its clock for each
+        new conversation.
+    </p>
+
+    <h3>Specific Values (where am I, who are you,...)</h3>
+    <table>
+        <tr>
+            <th class="narrow1">Element</th>
+            <th>Current Value</th>
+        </tr>
+        @foreach (var item in @Model.Conversation.HighTrackingData.HighContextList)
+        {
+            <tr>
+                <td class="narrow1">@item.Element</td>
+                <td>@item.Value</td>
+            </tr>
+        }
+    </table>
+
+    <h3>Variable Values (including other pronouns, i.e. not me or you)</h3>
+    <table>
+        <tr>
+            <th class="narrow1">Clause Piece</th>
+            <th>Elements</th>
+            <th class="narrow2">Logical Structure</th>
+            <th>Clause Matched</th>
+        </tr>
+        @foreach (var item in @Model.Conversation.PronounTrackingData.PronounList)
+        {
+            <tr>
+                <td class="narrow1">
+                    <ul class="inTable">
+                        @foreach (var part in @item.ClausePart)
+                        {
+                            <li>@part</li>
+                        }
+                    </ul>
+                </td>
+                <td>
+                    <ul class="inTable">
+                        @foreach (var part in @item.ClauseElements)
+                        {
+                            if (!string.IsNullOrWhiteSpace(part))
+                            {
+                                <li>@part</li>
+                            }
+                        }
+                    </ul>
+                </td>
+                <td class="narrow1">@Html.Raw(item.LS)</td>
+                <td>
+                    <p class="bold">@item.Clause</p>
+                    <ul class="inTable">
+                        @foreach (var part in @item.Information)
+                        {
+                            if (!string.IsNullOrWhiteSpace(part))
+                            {
+                                <li>@part</li>
+                            }
+                        }
+                    </ul>
+                </td>
+            </tr>
+        }
+
+    </table>
+
+    <p></p>
+    <span class="button1">
+        @Html.ActionLink("Return to Current Conversation", "Index", "Converse")
+    </span>
+
+    @if (@ViewBag.ErrorMessage != "")
+    {
+        <h3 id="Error">@ViewBag.ErrorMessage</h3>
+    }
+</div>

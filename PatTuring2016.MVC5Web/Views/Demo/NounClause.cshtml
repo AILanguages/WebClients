@@ -1,0 +1,44 @@
+﻿@{
+    Layout = "~/Views/Shared/_ConsoleLayout.cshtml";
+}
+@model  PatTuring2016.Common.ScreenModels.FullScreenModels.FullNounScreenModel
+<div id="@Model.CssScreen">
+
+    @Html.Partial("Partials/TopScreen", Model.Top)
+
+    <div id="clausefull">
+
+        @if (@Model.Nucleus != null)
+        {
+            @Html.Partial("Partials/LogicalStructure", Model)
+        }
+
+        @Html.Partial("Partials/NounHeading", Model)
+
+        @if (@Model.Nucleus != null)
+        {
+            <p class="blackseparator">
+                &uArr; The noun 'head' is above. Clause relations are below.&dArr;
+            </p>
+        }
+        @if (Model.Nucleus != null)
+        {
+            @Html.Partial("Partials/ClauseCore", Model)           
+        }
+        @if (@Model.Nucleus != null)
+        {
+            <h3>Clause Periphery (why)</h3>        
+        }
+
+        @if (@Model.MainList.Count > 0)
+        {
+            @Html.Partial("Partials/NewGridScreen", @Model.MainList)
+        }
+        else
+        {
+            <p>
+                When present, a list of periphery elements is displayed, such as 'why'.
+            </p>
+        }
+    </div>
+</div>

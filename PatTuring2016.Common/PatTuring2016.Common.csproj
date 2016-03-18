@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F7CB7BE6-7EEC-4DDA-A715-944151988474}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PatTuring2016.Common</RootNamespace>
+    <AssemblyName>PatTuring2016.Common</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime">
+      <HintPath>..\packages\Antlr3.Runtime.PCL.3.5.0.3\lib\portable-win+net40+sl40+wp\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AllGenders.cs" />
+    <Compile Include="Const.cs" />
+    <Compile Include="Contracts\IConverseService.cs" />
+    <Compile Include="Contracts\IMatchService.cs" />
+    <Compile Include="Contracts\ISamplesService.cs" />
+    <Compile Include="Contracts\ISessionService.cs" />
+    <Compile Include="Contracts\ISettingsService.cs" />
+    <Compile Include="Contracts\ITranslateService.cs" />
+    <Compile Include="DataContracts\ChangeSampleSettingsRequest.cs" />
+    <Compile Include="DataContracts\ChangeSampleSettingsResponse.cs" />
+    <Compile Include="DataContracts\ChangeScreenRequest.cs" />
+    <Compile Include="DataContracts\ChangeScreenResponse.cs" />
+    <Compile Include="DataContracts\ChangeSettingsRequest.cs" />
+    <Compile Include="DataContracts\ChangeSettingsResponse.cs" />
+    <Compile Include="DataContracts\ChooseSampleFileRequest.cs" />
+    <Compile Include="DataContracts\ChooseSampleFileResponse.cs" />
+    <Compile Include="DataContracts\CommandRequest.cs" />
+    <Compile Include="DataContracts\CommandResponse.cs" />
+    <Compile Include="DataContracts\Commands.cs" />
+    <Compile Include="DataContracts\ConverseResponse.cs" />
+    <Compile Include="DataContracts\GetIDRequest.cs" />
+    <Compile Include="DataContracts\GetIDResponse.cs" />
+    <Compile Include="DataContracts\GetSampleSettingsRequest.cs" />
+    <Compile Include="DataContracts\GetSampleSettingsResponse.cs" />
+    <Compile Include="DataContracts\GetScreenRequest.cs" />
+    <Compile Include="DataContracts\GetScreenResponse.cs" />
+    <Compile Include="DataContracts\GetSettingsRequest.cs" />
+    <Compile Include="DataContracts\GetSettingsResponse.cs" />
+    <Compile Include="DataContracts\GetTextRequest.cs" />
+    <Compile Include="DataContracts\GetTextResponse.cs" />
+    <Compile Include="DataContracts\GetTranslationRequest.cs" />
+    <Compile Include="DataContracts\GetTranslationResponse.cs" />
+    <Compile Include="DataContracts\NewMatchRequest.cs" />
+    <Compile Include="DataContracts\NewMatchResponse.cs" />
+    <Compile Include="DataContracts\Response.cs" />
+    <Compile Include="DataContracts\SampleMatchRequest.cs" />
+    <Compile Include="DataContracts\SampleMatchResponse.cs" />
+    <Compile Include="DataContracts\TranslationPair.cs" />
+    <Compile Include="Display.cs" />
+    <Compile Include="Politeness.cs" />
+    <Compile Include="IllocutionaryForce.cs" />
+    <Compile Include="PersonChange.cs" />
+    <Compile Include="RelativePosition.cs" />
+    <Compile Include="Formality.cs" />
+    <Compile Include="AllLanguages.cs" />
+    <Compile Include="ScreenModels\AnnotatedMatch.cs" />
+    <Compile Include="ScreenModels\Conversation\ConversationalItems.cs" />
+    <Compile Include="ScreenModels\Conversation\ConversationData.cs" />
+    <Compile Include="ScreenModels\Conversation\Dialog.cs" />
+    <Compile Include="ScreenModels\Conversation\HighContext.cs" />
+    <Compile Include="ScreenModels\Conversation\HighTrackingData.cs" />
+    <Compile Include="ScreenModels\Conversation\PronounContext.cs" />
+    <Compile Include="ScreenModels\Conversation\PronounTrackingData.cs" />
+    <Compile Include="ScreenModels\Conversation\TrackingData.cs" />
+    <Compile Include="ScreenModels\ConverseViewModel.cs" />
+    <Compile Include="ScreenModels\FullScreenModels\FullClauseScreenModel.cs" />
+    <Compile Include="ScreenModels\FullScreenModels\FullNounScreenModel.cs" />
+    <Compile Include="ScreenModels\FullScreenModels\FullScreenModel.cs" />
+    <Compile Include="ScreenModels\FullScreenModels\PhraseScreenModel.cs" />
+    <Compile Include="ScreenModels\FullScreenModels\SenseScreenModel.cs" />
+    <Compile Include="ScreenModels\FullScreenModels\SensesScreenModel.cs" />
+    <Compile Include="ScreenModels\FullScreenModels\SentenceScreenModel.cs" />
+    <Compile Include="ScreenModels\FullScreenModels\SentencesScreenModel.cs" />
+    <Compile Include="ScreenModels\FullScreenModels\StandardScreenModel.cs" />
+    <Compile Include="ScreenModels\FullScreenModels\WordScreenModel.cs" />
+    <Compile Include="ScreenModels\Match.cs" />
+    <Compile Include="ScreenModels\MatchSettings.cs" />
+    <Compile Include="ScreenModels\PartDisplays\AbstractPartDisplay.cs" />
+    <Compile Include="ScreenModels\PartDisplays\NewBasePartDisplay.cs" />
+    <Compile Include="ScreenModels\PartDisplays\SenseListModel.cs" />
+    <Compile Include="ScreenModels\PartDisplays\TextListPartDisplay.cs" />
+    <Compile Include="ScreenModels\PartDisplays\TextPartDisplay.cs" />
+    <Compile Include="ScreenModels\PartDisplays\TopScreenModel.cs" />
+    <Compile Include="ScreenModels\SampleMatchDisplay.cs" />
+    <Compile Include="ScreenModels\SampleSettings.cs" />
+    <Compile Include="ScreenModels\TranslatePair.cs" />
+    <Compile Include="ScreenModels\TranslateViewModel.cs" />
+    <Compile Include="TargetLanguages.cs" />
+    <Compile Include="SampleFiles.cs" />
+    <Compile Include="PatomValues.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

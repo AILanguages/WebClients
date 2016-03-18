@@ -1,0 +1,38 @@
+﻿@{
+    Layout = IsAjax ? null : "~/Views/Shared/_Layout.cshtml";
+}
+@using PatTuring2016.MVC5Web.Models
+@model  PatTuring2016.Common.ScreenModels.FullScreenModels.StandardScreenModel
+@{
+    ViewBag.Title = "Sentences Console";
+}
+@section scripts {
+    @Content.Script("jquery.unobtrusive-ajax.min.js", Url)
+}
+@Html.Partial("AjaxButtons")
+<div id="Sentences">
+    <table class="fullwidth">
+        <tr>
+            <th>More
+            </th>
+            <th>Sentence Matched
+            </th>
+            <th>Phrase Name
+            </th>
+        </tr>
+        @for (int i = 0; i < @Model.MainList.Count; i++)
+        {
+            <tr>
+                <td>
+                    @Html.Partial("Ajax/SelectDetail", new SelectDetails("Details", i))                   
+                </td>
+                <td>
+                    @Model.MainList[i].Matches
+                </td>
+                <td>
+                    @Model.MainList[i].PhraseName
+                </td>
+            </tr>
+        }
+    </table>
+</div>

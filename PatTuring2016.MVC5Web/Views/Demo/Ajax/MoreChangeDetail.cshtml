@@ -1,0 +1,9 @@
+﻿@model PatTuring2016.MVC5Web.Models.ModelDetails
+
+@Ajax.ActionLink(@Model.Title, "MoreChangeDetail", new { Type = @Model.ListNumber, @Model.Part }, new AjaxOptions
+        {
+            UpdateTargetId = "console",
+            InsertionMode = InsertionMode.Replace,
+            HttpMethod = "GET"
+        }
+            )

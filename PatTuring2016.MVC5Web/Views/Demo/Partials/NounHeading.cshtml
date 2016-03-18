@@ -1,0 +1,120 @@
+﻿@model  PatTuring2016.Common.ScreenModels.FullScreenModels.FullNounScreenModel
+
+@if (@Model.Noun != null)
+{     
+    <div id="nounhead">
+        <div id="nounphrase">
+            <span class="CoreMenuLabel">Noun Phrase</span> &nbsp;
+            @Html.Partial("Partials/WideNounAttributes", Model.NounPhraseOperators)
+
+            @if (Model.NounPhraseAttributes.TextList != "")
+            {
+                @Html.Partial("SimplePartials/SimpleTextDisplay", Model.NounPhraseAttributes)
+            }
+
+            @if (Model.Noun != null)
+            {
+                if (Model.Determiner != null)
+                {
+                @Html.Partial("Partials/MoreSenseList", Model.Determiner)
+                }
+
+                if (Model.Deixis != null)
+                {
+                @Html.Partial("Partials/MoreSenseList", Model.Deixis)
+                }
+
+                if (Model.Of != null)
+                {
+                @Html.Partial("Partials/MoreSenseList", Model.Of)
+                }
+            }
+
+            <div id="nouncore">
+                <span class="CoreMenuLabel">Noun Core</span> &nbsp;
+                @Html.Partial("SimplePartials/SimpleTextDisplay", Model.NounCoreOperators)
+
+                @if (Model.NounCoreAttributes.TextList != "")
+                {
+                    @Html.Partial("SimplePartials/SimpleTextDisplay", Model.NounCoreAttributes)
+                }
+
+                <div id="nounnucleus">
+                    <span class="CoreMenuLabel">Noun Nucleus</span> &nbsp;
+                    @Html.Partial("SimplePartials/SimpleTextDisplay", Model.NounNuclearOperators)
+                    @if (Model.NounNuclearAttributes.TextList != "")
+                    {
+                        @Html.Partial("SimplePartials/SimpleTextDisplay", Model.NounNuclearAttributes)
+                    }
+
+                    @if (@Model.Noun != null)
+                    {
+                        @Html.Partial("Partials/MoreSenseList", @Model.Noun)
+
+                        if (Model.Adjective != null)
+                        {
+                        @Html.Partial("Partials/MoreSenseList", @Model.Adjective)
+                        }
+
+                        if (Model.Adjective2 != null)
+                        {
+                        @Html.Partial("Partials/MoreSenseList", @Model.Adjective2)
+                        }
+
+                        if (Model.Opinion != null)
+                        {
+                        @Html.Partial("Partials/MoreSenseList", Model.Opinion)
+                        }
+
+                        if (Model.Size != null)
+                        {
+                        @Html.Partial("Partials/MoreSenseList", Model.Size)
+                        }
+
+                        if (Model.Length != null)
+                        {
+                        @Html.Partial("Partials/MoreSenseList", Model.Length)
+                        }
+
+                        if (Model.Age != null)
+                        {
+                        @Html.Partial("Partials/MoreSenseList", Model.Age)
+                        }
+
+                        if (Model.Colour != null)
+                        {
+                        @Html.Partial("Partials/MoreSenseList", Model.Colour)
+                        }
+
+                        if (Model.Origin != null)
+                        {
+                        @Html.Partial("Partials/MoreSenseList", Model.Origin)
+                        }
+
+                        if (Model.Material != null)
+                        {
+                        @Html.Partial("Partials/MoreSenseList", Model.Material)
+                        }
+                    }
+                </div>
+
+                @if (Model.Noun != null)
+                {
+                    <h3>Noun Core Periphery</h3>
+                }
+
+                @if (Model.Negative != null)
+                {
+                    @Html.Partial("Partials/MoreSenseList", Model.Negative)
+                }
+
+                @if (Model.Quantifier != null)
+                { 
+                    @Html.Partial("Partials/MoreSenseList", Model.Quantifier)
+                }
+
+            </div>
+        </div>
+            <h3>Noun Phrase Periphery</h3>
+    </div>
+}

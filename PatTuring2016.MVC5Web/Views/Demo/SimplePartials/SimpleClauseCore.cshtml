@@ -1,0 +1,16 @@
+﻿@model  PatTuring2016.Common.ScreenModels.FullScreenModels.FullClauseScreenModel
+<div id="simpleclausecore">
+
+    @Html.Partial("SimplePartials/SimpleBaseClauseCore", @Model)
+
+    @if (Model.NextClause.Count > 0) {
+    var model = Model.NextClause[0];
+    var next = Model.NextClause;
+    next.Remove(model);
+    <h3 class="clear">Other Cores with shared elements</h3>
+    <div id="coreclause">
+        @Html.Partial("SimplePartials/SimpleClauseCore1", model)
+    </div>
+    }
+
+</div>

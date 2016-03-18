@@ -1,0 +1,11 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model  PatTuring2016.Common.ScreenModels.FullScreenModels.FullClauseScreenModel
+@{
+    ViewBag.Title = "Simple Clause Console";
+}
+@section scripts {
+    @Content.Script("jquery.unobtrusive-ajax.min.js", Url)
+}
+@Html.Partial("SimplePartials/SimpleClause")

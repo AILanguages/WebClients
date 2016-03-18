@@ -1,0 +1,40 @@
+﻿@model PatTuring2016.Common.ScreenModels.ConverseViewModel
+@{
+    ViewBag.Title = "Conversation";
+    Layout = "~/Views/Shared/_AppLayout.cshtml";
+}
+@if (IsAjax)
+{
+    Layout = null;
+}
+<div id="converse">
+    <h1>Conversation Tracking Screen</h1>
+    <table>
+        <tr>
+            <th class="narrow1">Spoken by</th>
+            <th>What was said</th>
+            <th>When</th>
+        </tr>
+
+        @foreach (var item in @Model.Conversation.TrackingData.SpokenList)
+        {
+            <tr>
+                <td class="narrow1">@item.Speaker</td>
+                <td>@item.WhatSaid</td>
+                <td>@item.WhenSaid</td>
+            </tr>
+        }
+    </table>
+    <p></p>
+    <span class="button1">
+        @Html.ActionLink("View Current Context", "Context", "Converse")
+    </span>
+    <span class="button1">
+        @Html.ActionLink("Return", "Index", "Converse")
+    </span>
+
+    @if (@ViewBag.ErrorMessage != "")
+    {
+        <h3 id="Error">@ViewBag.ErrorMessage</h3>
+    }
+</div>

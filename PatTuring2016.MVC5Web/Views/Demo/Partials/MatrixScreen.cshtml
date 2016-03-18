@@ -1,0 +1,14 @@
+﻿@model  PatTuring2016.Common.ScreenModels.FullScreenModels.FullClauseScreenModel
+@foreach (var clause in Model.NextClause)
+{
+    if (clause.Nucleus.Matches != "")
+    {
+        continue;
+    }
+    
+    <h3>Licenses (and shared elements)</h3>
+    <div id="coreclause">
+        )    
+        @Html.Partial("Partials/ClauseCore", clause)
+    </div>
+}

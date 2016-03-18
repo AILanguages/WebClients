@@ -1,0 +1,19 @@
+﻿@model PatTuring2016.Common.ScreenModels.PartDisplays.TopScreenModel
+<div id="top">
+    <div class="tophalf">
+        <span class="LeftMenuLabel left">@Model.MatchedText.Title</span>
+        <textarea class="basestyle widthtextin left" wrap="soft" readonly="readonly">@Model.MatchedText.Text</textarea>
+    </div>
+
+    <span><span class="LeftMenuLabel left">@Model.Operators.Title</span>
+        <textarea class="basestyle left" readonly="readonly">@Model.Operators.TextList</textarea>
+    </span>
+
+    <span><span class="LeftMenuLabel left">@Model.Attributes.Title</span>
+        <textarea class="basestyle left" readonly="readonly">@Model.Attributes.TextList</textarea>
+    </span>
+
+    <span><span class="LeftMenuLabel left">@Model.PhraseName.Title</span>
+        <textarea class="basestyle left" readonly="readonly">@Model.PhraseName.Text</textarea>
+    </span>
+</div>

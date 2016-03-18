@@ -1,0 +1,17 @@
+﻿<div id="consolenav">
+    <span class="button">@Ajax.ActionLink("back", "Back", "Demo",
+                             new AjaxOptions
+                             {
+                                 UpdateTargetId = "console",
+                                 InsertionMode = InsertionMode.Replace,
+                                 HttpMethod = "GET"
+                             })
+    </span>&nbsp;<span class="button">@Ajax.ActionLink("last match", "Restart", "Demo",
+                                          new AjaxOptions
+                                          {
+                                              UpdateTargetId = "console",
+                                              InsertionMode = InsertionMode.Replace,
+                                              HttpMethod = "GET"
+                                          })
+    </span>&nbsp;<span class="button">@Html.ActionLink("new match", "Index", "Demo")</span>
+</div>

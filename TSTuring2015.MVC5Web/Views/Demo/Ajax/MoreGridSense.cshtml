@@ -1,9 +1,0 @@
-﻿@model TSTuring2015.MVCWeb.Models.ModelDetails
-
-@Ajax.ActionLink(@Model.Title, "MoreGridSense", new { Type = @Model.ListNumber, @Model.Part }, new AjaxOptions
-                    {
-                        UpdateTargetId = "console",
-                        InsertionMode = InsertionMode.Replace,
-                        HttpMethod = "GET"
-                    }
-                        )

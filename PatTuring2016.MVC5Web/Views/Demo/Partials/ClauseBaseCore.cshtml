@@ -1,0 +1,65 @@
+﻿@model  PatTuring2016.Common.ScreenModels.FullScreenModels.FullClauseScreenModel
+<p>
+    <span class="CoreMenuLabel">Core</span> &nbsp;
+    <span class="SmallMenuLabel">Verb Class: </span><span class="black">@Model.Description</span>
+    @if (!string.IsNullOrWhiteSpace(@Model.PartLs))
+    {
+    <span class="SmallMenuLabel">Partial Logical Structure:</span><span class="simple">
+        @Html.Raw(@Model.PartLs)
+    </span>
+    }
+</p>
+
+<div class="partwithattribs">
+    @Html.Partial("SimplePartials/SimpleTextDisplay", Model.CoreOperators)
+    @Html.Partial("SimplePartials/SimpleTextDisplay", Model.CoreAttributes)
+</div>
+<div id="corenucleus">
+    <div class="partwithattribs">
+        @Html.Partial("SimplePartials/SimpleTextDisplay", Model.NucleusOperators)
+        @Html.Partial("SimplePartials/SimpleTextDisplay", Model.NucleusAttributes)
+    </div>
+    @if (@Model.Nucleus != null)
+    {
+    @Html.Partial("Partials/MoreSenseList", @Model.Nucleus)
+
+    if (@Model.Nucleus2 != null)
+    {
+    @Html.Partial("Partials/MoreSenseList", @Model.Nucleus2)
+    }
+    if (@Model.NucleusPrep != null)
+    {
+    @Html.Partial("Partials/MoreSenseList", @Model.NucleusPrep)
+    }
+    }
+    @if (@Model.ClauseNuclearList.Count > 0)
+    {
+    <h3>Elements Including Nuclear Periphery (auxiliary, how)</h3>
+    @Html.Partial("Partials/NewGridScreen", @Model.ClauseNuclearList)
+    }
+    else
+    {
+    <p class="white">
+        When present, a list of nuclear periphery elements is displayed, such as 'how'.
+    </p>
+    }
+</div>
+
+<div id="main">
+    @if (@Model.Main.Count > 0)
+    {
+    @Html.Partial("Partials/ListSenseList", @Model.Main)
+    }
+</div>
+<h3>Core Periphery (when, where, how)</h3>
+    @if (@Model.ClauseCoreList.Count > 0)
+    {
+        @Html.Partial("Partials/NewGridScreen", @Model.ClauseCoreList)
+    }
+    else
+    {
+<p>
+    When present, a list of core periphery elements is displayed, such as 'when', 'where'
+    and 'how'.
+</p>
+    }

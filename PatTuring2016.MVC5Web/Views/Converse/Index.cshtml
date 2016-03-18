@@ -1,0 +1,46 @@
+﻿@model PatTuring2016.Common.ScreenModels.ConverseViewModel
+@{
+    ViewBag.Title = "Conversation";
+    Layout = "~/Views/Shared/_AppLayout.cshtml";
+}
+@if (IsAjax)
+{
+    Layout = null;
+}
+<div id="converse">
+    @using (Html.BeginForm())
+    {
+        <h2>Enter your conversational text</h2>
+        <span>
+            <span>(full sentences, please)</span>
+            @Html.EditorFor(model => model.Match.TextIn)
+        </span>
+        <span class="spacetop">
+            <input type="submit" value="Say it!" />
+        </span>
+    }
+
+    <div id="ts-head">
+        @if (Model.Conversation.CurrentResponse != null)
+        {
+
+            <p class="redspeech">@Model.Conversation.CurrentResponse.WhatSaid</p>
+        }
+    </div>
+    <div class="topmargin">
+        <span class="button1">
+            @Html.ActionLink("New conversation", "Restart", "Converse")
+        </span>
+        <span class="button1">
+            @Html.ActionLink("View Current Context", "Context", "Converse")
+        </span>
+        <span class="button1">
+            @Html.ActionLink("View Current Conversation List", "Tracker", "Converse")
+        </span>
+    </div>
+
+    @if (@ViewBag.ErrorMessage != "")
+    {
+        <h3 id="Error">@ViewBag.ErrorMessage</h3>
+    }
+</div>

@@ -1,0 +1,51 @@
+﻿@{
+    Layout = "~/Views/Shared/_ConsoleLayout.cshtml";
+}
+@model  PatTuring2016.Common.ScreenModels.FullScreenModels.FullClauseScreenModel
+<div id="@Model.CssScreen">
+
+    @Html.Partial("Partials/TopScreen", Model.Top)
+
+    @*@if (!@Model.Translation.StartsWith("Error:"))
+    {
+        <div id="trans">
+            <p>
+                <span class="SmallMenuLabel">Target Language: </span><span class="black">@Model.TargetLanguage</span>
+                <span class="SmallMenuLabel">Translation: </span><span class="black">@Model.Translation</span>
+
+                @if (!string.IsNullOrWhiteSpace(@Model.SourceTranslation))
+                {
+                    <span class="SmallMenuLabel">Phrase-only Translation: </span><span class="black">@Model.SourceTranslation</span>
+                }
+            </p>
+        </div>
+    }*@
+
+    <div id="clausefull">
+
+        @if (@Model.Nucleus != null)
+        {
+            @Html.Partial("Partials/LogicalStructure", Model)
+        }
+
+        @if (Model.Nucleus != null)
+        {
+            @Html.Partial("Partials/ClauseCore", Model)           
+        }
+        @if (@Model.Nucleus != null)
+        {
+            <h3>Clause Periphery (why)</h3>        
+        }
+
+        @if (@Model.MainList.Count > 0)
+        {
+            @Html.Partial("Partials/NewGridScreen", @Model.MainList)
+        }
+        else
+        {
+            <p>
+                When present, a list of periphery elements is displayed, such as 'why'.
+            </p>
+        }
+    </div>
+</div>

@@ -1,0 +1,91 @@
+﻿@model  PatTuring2016.Common.ScreenModels.FullScreenModels.FullNounScreenModel
+
+@if (@Model.Noun != null)
+{     
+    <div id="simplenounhead">
+        <div id="simplenounphrase">
+            @Html.Partial("SimplePartials/SimpleTextDisplay", @Model.NounPhraseOperators)
+
+            @if (Model.Determiner != null)
+            {
+                @Html.Partial("SimplePartials/SimpleMoreSenseList", @Model.Determiner)
+            }
+
+            @if (Model.Deixis != null)
+            {
+                @Html.Partial("SimplePartials/SimpleMoreSenseList", @Model.Deixis)
+            }
+
+            @if (Model.Of != null)
+            {
+                @Html.Partial("SimplePartials/SimpleMoreSenseList", @Model.Of)
+            }
+
+            <div id="nouncore">
+                @Html.Partial("SimplePartials/SimpleTextDisplay", @Model.NounCoreOperators)
+
+                <div id="simplenounnucleus">
+
+                    @Html.Partial("SimplePartials/SimpleMoreSenseList", @Model.Noun)
+
+                    @if (Model.Adjective != null)
+                    {
+                        @Html.Partial("SimplePartials/SimpleMoreSenseList", @Model.Adjective)
+                    }
+
+                    @if (@Model.Adjective2 != null)
+                    {
+                        @Html.Partial("SimplePartials/SimpleMoreSenseList", @Model.Adjective2)
+                    }
+
+                    @if (Model.Opinion != null)
+                    {
+                        @Html.Partial("SimplePartials/SimpleMoreSenseList", Model.Opinion)
+                    }
+
+                    @if (Model.Size != null)
+                    {
+                        @Html.Partial("SimplePartials/SimpleMoreSenseList", Model.Size)
+                    }
+
+                    @if (Model.Length != null)
+                    {
+                        @Html.Partial("SimplePartials/SimpleMoreSenseList", Model.Length)
+                    }
+
+                    @if (Model.Age != null)
+                    {
+                        @Html.Partial("SimplePartials/SimpleMoreSenseList", Model.Age)
+                    }
+
+                    @if (Model.Colour != null)
+                    {
+                        @Html.Partial("SimplePartials/SimpleMoreSenseList", Model.Colour)
+                    }
+
+                    @if (Model.Origin != null)
+                    {
+                        @Html.Partial("SimplePartials/SimpleMoreSenseList", Model.Origin)
+                    }
+
+                    @if (Model.Material != null)
+                    {
+                        @Html.Partial("SimplePartials/SimpleMoreSenseList", Model.Material)
+                    }
+
+                </div>
+
+                @if (Model.Negative != null)
+                {
+                    @Html.Partial("SimplePartials/SimpleMoreSenseList", Model.Negative)
+                }
+
+                @if (Model.Quantifier != null)
+                {
+                    @Html.Partial("SimplePartials/SimpleMoreSenseList", Model.Quantifier)
+                }
+
+            </div>
+        </div>
+    </div>
+}

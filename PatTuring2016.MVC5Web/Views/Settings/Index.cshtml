@@ -1,0 +1,72 @@
+﻿@using System
+@using AilTuring2016.Common
+@model PatTuring2016.Common.ScreenModels.TranslateViewModel
+@{
+    ViewBag.Title = "Settings";
+    Layout = "~/Views/Shared/_AppLayout.cshtml";
+}
+@section scripts {
+    @Content.Script("jquery.validate.min.js", Url)
+    @Content.Script("jquery.validate.unobtrusive.min.js", Url)
+}
+<div id="settings" class="@ViewBag.Passthrough">
+    <h1>Settings for: @ViewBag.Passthrough</h1>
+    <p>
+        Settings allow you to select between available properties.
+    </p>
+    <div>
+        @using (Html.BeginForm())
+        {
+            <button type="submit">Continue (apply settings)</button>
+            <p></p>
+
+            <div class="legendsettings left @ViewBag.Passthrough">
+                <fieldset>
+                    <legend>General Settings</legend>
+
+                    <span class="leftMenu">Target Language</span>
+                    <div class="legendsettings">
+                        @Html.DropDownListFor(x => x.MatchSettings.TargetLanguage, new SelectList(Enum.GetValues(typeof(TargetLanguages))))
+                    </div>
+                    <span class="leftMenu">Sample File List</span>
+                    <div class="legendsettings">
+                        @Html.DropDownListFor(model => model.SampleSettings.SampleFiles, new SelectList(Enum.GetValues(typeof(SampleFiles))))
+                    </div>
+                    <h3>Speaker Details</h3>
+                    <div class="legendsettings">
+                        @Html.DropDownListFor(model => model.MatchSettings.Formal, new SelectList(Enum.GetValues(typeof(Formalities))))
+                    </div>
+                    <div class="legendsettings">
+                        @Html.DropDownListFor(model => model.MatchSettings.Polite, new SelectList(Enum.GetValues(typeof(Politeness))))
+                    </div>
+                    <div class="legendsettings">
+                        @Html.DropDownListFor(model => model.MatchSettings.Speaker, new SelectList(Enum.GetValues(typeof(RelativePositions))))
+                    </div>
+                    <div class="legendsettings">
+                        @Html.DropDownListFor(model => model.MatchSettings.IllocutionaryForce, new SelectList(Enum.GetValues(typeof(IllocutionaryForce))))
+                    </div>
+                    <h3>Screen Display Settings</h3>
+                    <div>
+                        @Html.RadioButtonFor(e => e.MatchSettings.SimpleView, true, new { id = "simpleview-true" })
+                        @Html.Label("simpleview-true", "SimpleView")
+                        @Html.RadioButtonFor(e => e.MatchSettings.SimpleView, false, new { id = "simpleview-false" })
+                        @Html.Label("simpleview-false", "FullView")
+                    </div>
+                    <div>
+                        @Html.RadioButtonFor(e => e.MatchSettings.ShowSentences, true, new { id = "sentence-true" })
+                        @Html.Label("sentence-true", "Sentence")
+                        @Html.RadioButtonFor(e => e.MatchSettings.ShowSentences, false, new { id = "sentence-false" })
+                        @Html.Label("sentence-false", "Clause")
+                    </div>
+                    <div>
+                        @Html.RadioButtonFor(e => e.MatchSettings.Characters, true, new { id = "characters-true" })
+                        @Html.Label("characters-true", "Characters")
+                        @Html.RadioButtonFor(e => e.MatchSettings.Characters, false, new { id = "characters-false" })
+                        @Html.Label("characters-false", "Letters")
+                    </div>
+
+                </fieldset>
+            </div>
+        }
+    </div>
+</div>

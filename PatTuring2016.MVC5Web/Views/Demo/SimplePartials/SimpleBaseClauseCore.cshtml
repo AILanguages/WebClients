@@ -1,0 +1,40 @@
+﻿@model  PatTuring2016.Common.ScreenModels.FullScreenModels.FullClauseScreenModel
+<div id="simplecorenucleus">
+    @if (@Model.NucleusOperators.TextList != "")
+    {
+    <span>
+        @Html.Partial("SimplePartials/SimpleTextDisplay", Model.NucleusOperators)
+    </span>
+    }
+
+    @if (@Model.Nucleus != null)
+    {
+    @Html.Partial("SimplePartials/SimpleMoreSenseList", @Model.Nucleus)
+
+    if (@Model.Nucleus2 != null)
+    {
+    @Html.Partial("SimplePartials/SimpleMoreSenseList", @Model.Nucleus2)
+    }
+    if (@Model.NucleusPrep != null)
+    {
+    @Html.Partial("SimplePartials/SimpleMoreSenseList", @Model.NucleusPrep)
+    }
+    }
+
+    @if (@Model.ClauseNuclearList.Count > 0)
+    {
+    @Html.Partial("SimplePartials/NewGridScreen", @Model.ClauseNuclearList)
+    }
+</div>
+
+<div id="main">
+    @if (@Model.Main.Count > 0)
+    {
+    @Html.Partial("SimplePartials/SimpleListSenseList", @Model.Main)
+    }
+</div>
+    @if (@Model.ClauseCoreList.Count > 0)
+    {
+<h3>Periphery</h3>
+        @Html.Partial("SimplePartials/NewGridScreen", @Model.ClauseCoreList)
+    }

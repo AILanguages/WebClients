@@ -1,0 +1,17 @@
+﻿@{
+    Layout = "~/Views/Shared/_ConsoleLayout.cshtml";
+}
+@model  PatTuring2016.Common.ScreenModels.FullScreenModels.SentenceScreenModel
+<div id="@Model.CssScreen">
+    
+    @Html.Partial("Partials/TopScreen", Model.Top)
+
+    <h3>Phrase Details</h3>
+
+    @Html.Partial("Partials/LogicalStructure", Model)
+
+    @if (@Model.PhraseList.Count > 0)
+    {
+        @Html.Partial("Partials/SentenceScreen", Model)            
+    }
+</div>

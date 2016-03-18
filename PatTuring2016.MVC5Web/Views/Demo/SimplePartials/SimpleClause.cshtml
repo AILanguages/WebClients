@@ -1,0 +1,49 @@
+﻿@{
+    Layout = "~/Views/Shared/_ConsoleLayout.cshtml";
+}
+@model  PatTuring2016.Common.ScreenModels.FullScreenModels.FullClauseScreenModel
+<div id="@Model.CssScreen">
+    <div id="simpletop">
+        <div class="simpletophalf">
+            <span class="LeftMenuLabel left">@Model.Top.MatchedText.Title</span>
+            <textarea class="basestyle widthtextin left" wrap="soft" readonly="readonly">@Model.Top.MatchedText.Text</textarea>
+        </div>
+
+        <span><span class="LeftMenuLabel left">@Model.Top.Operators.Title</span>
+            <textarea class="simpletbasestyle simplewidthtextin left" readonly="readonly">@Model.Top.Operators.TextList</textarea>
+        </span>
+    </div>
+
+    @*@if (!@Model.Translation.StartsWith("Error:"))
+    {
+        <div id="trans">
+            <p>
+                <span class="SmallMenuLabel">Target Language: </span><span class="black">@Model.TargetLanguage</span>
+                <span class="SmallMenuLabel">Translation: </span><span class="black">@Model.Translation</span>
+
+                @if (!string.IsNullOrWhiteSpace(@Model.SourceTranslation))
+                {
+                    <span class="SmallMenuLabel">Phrase-only Translation: </span><span class="black">@Model.SourceTranslation</span>
+                }
+            </p>
+        </div>
+    }*@
+
+    <div id="clausefull">
+
+        @if (@Model.Nucleus != null)
+        {
+            @Html.Partial("Partials/LogicalStructure", Model)
+        }
+
+        @if (Model.Nucleus != null)
+        {
+            @Html.Partial("SimplePartials/SimpleClauseCore", Model)           
+        }
+
+        @if (@Model.MainList.Count > 0)
+        {
+            @Html.Partial("SimplePartials/NewGridScreen", @Model.MainList)
+        }
+    </div>
+</div>

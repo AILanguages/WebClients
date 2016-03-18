@@ -1,0 +1,9 @@
+﻿@model PatTuring2016.MVC5Web.Models.SelectDetails
+
+@Ajax.ActionLink(@Model.Title, "Select", new { Selection = @Model.Select }, new AjaxOptions
+               {
+                   UpdateTargetId = "console",
+                   InsertionMode = InsertionMode.Replace,
+                   HttpMethod = "GET"
+               }
+                    )

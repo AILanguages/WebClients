@@ -1,9 +1,0 @@
-﻿@model TSTuring2015.MVCWeb.Models.SelectDetails
-
-@Ajax.ActionLink(@Model.Title, "SelectWord", new { Choice = 0 }, new AjaxOptions
-        {
-            UpdateTargetId = "console",
-            InsertionMode = InsertionMode.Replace,
-            HttpMethod = "GET"
-        }
-            )

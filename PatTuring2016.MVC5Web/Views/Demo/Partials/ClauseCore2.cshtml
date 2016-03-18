@@ -1,0 +1,15 @@
+﻿@model  PatTuring2016.Common.ScreenModels.FullScreenModels.FullClauseScreenModel
+<div id="clausecore">
+
+    @Html.Partial("Partials/ClauseBaseCore", Model)
+
+    @if (Model.NextClause.Count > 0) {
+    var model = Model.NextClause[0];
+    Model.NextClause.Remove(model);
+    <h3>Licensed Cores (with shared elements)</h3>
+    <div id="coreclause">
+        @Html.Partial("Partials/ClauseCore3", model)
+    </div>
+    }
+
+</div>

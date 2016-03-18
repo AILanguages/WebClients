@@ -1,0 +1,9 @@
+﻿@{
+    Layout = "~/Views/Shared/_ConsoleLayout.cshtml";
+}
+@model PatTuring2016.Common.ScreenModels.FullScreenModels.PhraseScreenModel
+<div id="@Model.CssScreen">
+    @Html.Partial("Partials/TopScreen", Model.Top)
+
+    @Html.Partial("Partials/PhraseGridScreen", Model)
+</div>

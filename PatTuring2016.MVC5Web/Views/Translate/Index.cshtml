@@ -1,0 +1,82 @@
+﻿@*@using System.Speech.Synthesis*@
+@using System
+@using System.Linq
+@using AilTuring2016.Common
+
+@model PatTuring2016.Common.ScreenModels.TranslateViewModel
+@{
+    ViewBag.Title = "Translation";
+    Layout = "~/Views/Shared/_AppLayout.cshtml";
+}
+
+<div id="translate">
+    @using (Html.BeginForm())
+    {
+        <div class="right width400">
+            <fieldset>
+                <legend>Settings</legend>
+
+                <div class="right width200">
+                    <h3>Target Language</h3>
+                    @Html.DropDownListFor(x => x.MatchSettings.TargetLanguage, new SelectList(Enum.GetValues(typeof(TargetLanguages))))
+
+                    @Html.HiddenFor(model => model.SampleSettings.SampleFiles, new SelectList(Enum.GetValues(typeof(SampleFiles))))
+                    <h3>Display Option</h3>
+                    <div>
+                        @Html.RadioButtonFor(e => e.MatchSettings.Characters, true, new { id = "characters-true" })
+                        @Html.Label("characters-true", "Characters")
+                        @Html.RadioButtonFor(e => e.MatchSettings.Characters, false, new { id = "characters-false" })
+                        @Html.Label("characters-false", "Letters")
+                    </div>
+                </div>
+
+                <div>
+                    <h3>Speaker Details</h3>
+                    <div class="legendsettings">
+                        @Html.DropDownListFor(model => model.MatchSettings.Formal, new SelectList(Enum.GetValues(typeof(Formalities))))
+                    </div>
+                    <div class="legendsettings">
+                        @Html.DropDownListFor(model => model.MatchSettings.Polite, new SelectList(Enum.GetValues(typeof(Politeness))))
+                    </div>
+                    <div class="legendsettings">
+                        @Html.DropDownListFor(model => model.MatchSettings.Speaker, new SelectList(Enum.GetValues(typeof(RelativePositions))))
+                    </div>
+                    <div class="legendsettings">
+                        @Html.DropDownListFor(model => model.MatchSettings.IllocutionaryForce, new SelectList(Enum.GetValues(typeof(IllocutionaryForce))))
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+        <div class="gap50">
+            <fieldset>
+                <legend>Text entry (enter full sentence to translate)</legend>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.Match.TextIn)
+                </div>
+            </fieldset>
+        </div>
+        <input type="submit" value="Match!" />
+
+        <div class="clearit">
+            <table class="wide">
+                <tr>
+                    <th>Matched result</th>
+                    <th>Last search</th>
+                </tr>
+
+                @for (var i = Model.Translations.Count() - 1; i >= 0; i--)
+                {
+                    <tr>
+                        <td class="thin1">
+                            @Html.EditorFor(modelItem => Model.Translations[i].Target)
+                        </td>
+                        <td class="thin1">
+                            @Html.EditorFor(modelItem => Model.Translations[i].Source)
+                        </td>
+
+                    </tr>
+                }
+            </table>
+        </div>
+    }
+</div>
